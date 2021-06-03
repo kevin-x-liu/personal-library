@@ -16,17 +16,16 @@ function LibraryApp() {
       .then((obj) => {
         setData(obj);
       });
+  };
 
+  const callback = () => {
+    newFetch();
     setRemove(!remove);
   };
 
   useEffect(() => {
     newFetch();
   }, [remove]);
-
-  const callback = () => {
-    newFetch();
-  };
 
   const bookList = () => {
     return data.map((bk) => {

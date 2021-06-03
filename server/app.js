@@ -42,6 +42,8 @@ app.get("/library", async (req, res) => {
   const snapshot = await libraryRef.get();
   const info = [];
 
+  console.log("read");
+
   snapshot.forEach((doc) => {
     let mod = doc.data();
     mod.id = doc.id;

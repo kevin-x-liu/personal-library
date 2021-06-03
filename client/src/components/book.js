@@ -44,7 +44,13 @@ function Book(props) {
             </Typography>
           </div>
           <div style={{ width: "5vw" }}>
-            <Button onClick={handleClick}>{props.action}</Button>
+            <Button
+              onClick={() => {
+                handleClick();
+              }}
+            >
+              {props.action}
+            </Button>
           </div>
         </div>
         <div>
